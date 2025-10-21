@@ -14,7 +14,7 @@ type AppProps = {
 
 export default function App({
   logoSrc = logoImage,
-  brandTitle = "Hub Prompt Assistentes",
+  brandTitle = "IA na Prática: do Zero ao seu Funcionário Digital",
 }: AppProps): JSX.Element {
   const [expandedArea, setExpandedArea] = useState<string | null>(null);
   const [selectedAssistant, setSelectedAssistant] = useState<Assistant | null>(
@@ -47,12 +47,8 @@ export default function App({
 
       <main className={styles.main} role="main">
         <p className={styles.lead}>
-          Funcionários Digitais criados no curso:
-          <p>
-            <span className={styles.highlight}>
-              IA na Prática: do Zero ao seu Funcionário Digital
-            </span>
-          </p>
+          Funcionários Digitais criados durante o curso: Clique em uma das áreas
+          e conheça a produção de nossos alunos
         </p>
 
         <div className={styles.areas}>
