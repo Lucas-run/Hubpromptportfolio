@@ -37,7 +37,7 @@ export const AREAS: Area[] = [
     assistants: [
       {
         id: "assistente-musical",
-        name: "Co-produtor/Diretor Artístico-Musical",
+        name: "Co-Produtor/Diretor Artístico-Musical",
         desc: "Atua na organização de processos criativos, soluções técnicas e análises musicais práticas.",
         func: "Assistente criado para integrar direção artística, gestão técnica e curadoria musical em produções autorais e colaborativas. Seu escopo é voltado à direção artística e musical. O objetivo é aliviar a sobrecarga de tarefas criativas e técnicas — curadoria, organização de documentos, assistência em arranjos, solução de problemas tecnológicos e decisões estéticas em estúdio e palco.",
       },
@@ -67,7 +67,7 @@ export const AREAS: Area[] = [
       },
       {
         id: "assistente-produtorJuridico",
-        name: "Produtor de Conteúdo Jurídico",
+        name: "Produtor de Conteúdo Jurídico para Redes Sociais",
         desc: "Este assistente foi criado para apoiar advogados criminalistas na construção de uma presença digital sólida, estratégica e ética, com foco em gerar autoridade, empatia e credibilidade junto ao público.",
         func: "Ele atua como um planejador e redator especializado em conteúdo jurídico-criminal, adaptando linguagem técnica a formatos acessíveis e humanizados.",
       },
@@ -85,7 +85,7 @@ export const AREAS: Area[] = [
       },
       {
         id: "assistente-publicacoes",
-        name: "Analista de desempenho de publicações",
+        name: "Analista de Desempenho de Publicações",
         desc: "Assistente criado para monitorar, interpretar e otimizar os resultados de postagens em redes sociais.",
         func: "Analisa métricas de alcance, engajamento e conversão, oferecendo insights práticos para aprimorar estratégias de conteúdo e ampliar resultados.",
       },
@@ -109,7 +109,7 @@ export const AREAS: Area[] = [
       },
       {
         id: "assistente-digitalTarefas",
-        name: "Gestor Digital de Rotinas/Coordenador Digital de Tarefas",
+        name: "Coordenador Digital de Tarefas",
         desc: "Assistente criado para organizar tarefas e estruturar rotinas diárias de forma simples, leve e eficiente",
         func: "Ajuda o usuário a manter o foco, otimizar o tempo e equilibrar prioridades, promovendo produtividade com clareza e leveza no dia a dia.",
       },
