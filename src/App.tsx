@@ -47,8 +47,10 @@ export default function App({
 
       <main className={styles.main} role="main">
         <p className={styles.lead}>
-          Funcionários Digitais criados durante o curso: Clique em uma das áreas
-          e conheça a produção de nossos alunos
+          Funcionários Digitais criados durante o curso:
+        </p>
+        <p className={styles.lead}>
+          Clique em uma das áreas e conheça a produção de nossos alunos
         </p>
 
         <div className={styles.areas}>
