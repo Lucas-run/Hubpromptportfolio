@@ -3,7 +3,7 @@
   --brand-gradient-end: #3d3cff;
   --brand-accent: #2ad0ff;
   --bg: #fff;
-  --muted: #666;
+  --muted: #202020;
 }
 
 * {
@@ -42,6 +42,7 @@
 .lead {
   margin: 4px 0 18px;
   color: var(--muted);
+  text-align: center;
 }
 .areas {
   display: grid;
@@ -52,6 +53,10 @@
   padding: 12px;
   border-radius: 8px;
   background: rgba(61, 60, 255, 0.05);
+}
+
+.selectedTitle {
+  font-weight: bold;
 }
 .headerInner {
   display: flex;

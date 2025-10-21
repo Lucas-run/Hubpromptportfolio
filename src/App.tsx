@@ -64,8 +64,8 @@ export default function App({
 
         {selectedAssistant && (
           <aside className={styles.selected} role="status">
+            <div className={styles.selectedTitle}>{selectedAssistant.name}</div>
             <strong>Funções do assistente:</strong>
-            <div>{selectedAssistant.name}</div>
             <div>{selectedAssistant.func}</div>
           </aside>
         )}

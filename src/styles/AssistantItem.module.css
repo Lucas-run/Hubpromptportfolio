@@ -12,6 +12,7 @@
 }
 .assistantName {
   font-weight: 600;
+  text-align: center;
 }
 .assistantDesc {
   font-size: 0.9rem;
