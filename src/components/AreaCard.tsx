@@ -28,7 +28,6 @@ export const AreaCard = ({
         type="button"
       >
         <span className={styles.areaTitle}>{area.title}</span>
-        <span className={styles.chev}>{expanded ? "▾" : "▸"}</span>
       </button>
 
       <div
