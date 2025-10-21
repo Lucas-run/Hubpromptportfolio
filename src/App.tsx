@@ -47,7 +47,12 @@ export default function App({
 
       <main className={styles.main} role="main">
         <p className={styles.lead}>
-          Escolha uma área para ver os assistentes disponíveis.
+          Funcionários Digitais criados no curso:
+          <p>
+            <span className={styles.highlight}>
+              IA na Prática: do Zero ao seu Funcionário Digital
+            </span>
+          </p>
         </p>
 
         <div className={styles.areas}>
