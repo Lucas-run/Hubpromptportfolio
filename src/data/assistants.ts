@@ -103,7 +103,7 @@ export const AREAS: Area[] = [
     assistants: [
       {
         id: "assistente-digital",
-        name: "Tutor Digita Acadêmico",
+        name: "Tutor Digital Acadêmico",
         desc: "Assistente criado para otimizar a produção e revisão de materiais acadêmicos, oferecendo suporte inteligente a estudantes e pesquisadores.",
         func: "Auxilia na organização de ideias, clareza textual e compreensão de conteúdos complexos, tornando o aprendizado mais dinâmico e eficiente.",
       },
