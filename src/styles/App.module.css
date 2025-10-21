@@ -1,0 +1,68 @@
+:root {
+  --brand-gradient-start: #ff7aa2;
+  --brand-gradient-end: #3d3cff;
+  --brand-accent: #2ad0ff;
+  --bg: #fff;
+  --muted: #666;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.app {
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(
+    180deg,
+    var(--brand-gradient-start),
+    var(--brand-gradient-end) 100%
+  );
+  color: #0b0b12;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main {
+  width: 100%;
+  max-width: 720px;
+  min-height: 100vh;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 14px;
+  box-shadow: 0 8px 30px rgba(19, 20, 40, 0.06);
+  padding: 20px;
+  margin-top: 18px;
+}
+
+.lead {
+  margin: 4px 0 18px;
+  color: var(--muted);
+}
+.areas {
+  display: grid;
+  gap: 12px;
+}
+.selected {
+  margin-top: 14px;
+  padding: 12px;
+  border-radius: 8px;
+  background: rgba(61, 60, 255, 0.05);
+}
+.headerInner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.siteTitle {
+  font-size: 1.25rem;
+  margin: 0;
+}
+.footer {
+  margin-top: 12px;
+  color: var(--bg);
+}
