@@ -80,3 +80,24 @@
   margin-top: 12px;
   color: var(--bg);
 }
+
+/* Cards especiais ("Quem Somos" / "Quem será sua professora") */
+.specialCard {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.95),
+    rgba(255, 255, 255, 0.88)
+  );
+  border-radius: 10px;
+  padding: 12px;
+  text-align: center;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.specialCard:hover {
+  background: rgba(61, 60, 255, 0.06);
+  transform: translateY(-2px);
+}

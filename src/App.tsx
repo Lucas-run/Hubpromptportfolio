@@ -3,9 +3,12 @@ import type { Area, Assistant } from "./types";
 import { AREAS } from "./data/assistants";
 import { Header } from "./components/header";
 import { AreaCard } from "./components/AreaCard";
+import { ModalImage } from "./components/ModalImage";
 import styles from "./styles/App.module.css";
 
 import logoImage from "./assets/logo.jpeg";
+import empresaImage from "./assets/empresa.png";
+import professoraImage from "./assets/professora.png";
 
 type AppProps = {
   logoSrc?: string;
@@ -20,6 +23,11 @@ export default function App({
   const [selectedAssistant, setSelectedAssistant] = useState<Assistant | null>(
     null
   );
+
+  // CONTROLA QUAL MODAL ESTÁ ABERTO
+  const [activeModal, setActiveModal] = useState<
+    "empresa" | "professora" | null
+  >(null);
 
   const areas = useMemo<Area[]>(() => AREAS, []);
 
@@ -63,6 +71,20 @@ export default function App({
               onAssistantClick={handleAssistantClick}
             />
           ))}
+
+          {/*CARDS ESPECIAIS */}
+          <div
+            className={styles.specialCard}
+            onClick={() => setActiveModal("empresa")}
+          >
+            Quem Somos
+          </div>
+          <div
+            className={styles.specialCard}
+            onClick={() => setActiveModal("professora")}
+          >
+            Quem será sua professora
+          </div>
         </div>
 
         {selectedAssistant && (
@@ -79,6 +101,22 @@ export default function App({
           © {new Date().getFullYear()} HubPrompt. Todos os direitos reservados.
         </small>
       </footer>
+
+      {/* EXIBIÇÃO DO MODAL DE ACORDO COM O CARD CLICADO */}
+      {activeModal === "empresa" && (
+        <ModalImage
+          src={empresaImage}
+          alt="Quem Somos"
+          onClose={() => setActiveModal(null)}
+        />
+      )}
+      {activeModal === "professora" && (
+        <ModalImage
+          src={professoraImage}
+          alt="Quem será sua professora"
+          onClose={() => setActiveModal(null)}
+        />
+      )}
     </div>
   );
 }
