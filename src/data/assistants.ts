@@ -71,6 +71,12 @@ export const AREAS: Area[] = [
         desc: "Este assistente foi criado para apoiar advogados criminalistas na construção de uma presença digital sólida, estratégica e ética, com foco em gerar autoridade, empatia e credibilidade junto ao público.",
         func: "Ele atua como um planejador e redator especializado em conteúdo jurídico-criminal, adaptando linguagem técnica a formatos acessíveis e humanizados.",
       },
+      {
+        id: "assistente-contratos",
+        name: "Analista de Contratos",
+        desc: "Assistente especializado em análise de contratos baseado na legislação brasileira.",
+        func: "Auxilia na revisão, interpretação e resumo de cláusulas contratuais. Identifica riscos jurídicos, financeiros e de conformidade, classificando-os por severidade. Sugere melhorias e ajustes com base em boas práticas do mercado. Atua como ferramenta de apoio, sem substituir a orientação jurídica profissional.",
+      },
     ],
   },
   {
