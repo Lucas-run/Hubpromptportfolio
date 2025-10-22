@@ -6,18 +6,6 @@ export const AREAS: Area[] = [
     title: "Educação",
     assistants: [
       {
-        id: "assistente-educacao",
-        name: "Planejador de Aula e Treino de Educação Física",
-        desc: "Planeja aulas e treinos personalizados.",
-        func: "Criar planos de aula adaptados a diferentes anos letivos, além de atender alunos com necessidades especiais. Produzir ideias de atividades práticas e teóricas, além da formação de treinos e atividades. Elaborar textos explicativos, apresentações, mensagens e informativos para alunos e pais. Sugerir melhorias didáticas sempre com explicações simples e fundamentadas.",
-      },
-      {
-        id: "assistente-agronomia",
-        name: "Analista de Pesquisa Científica em Agronomia",
-        desc: "Ajuda estudantes a analisar e resumir artigos acadêmicos",
-        func: "O assistente deve resumir artigos, gerar tópicos, criar referências e citações ABNT, organizar estruturas de texto e sugerir ideias de escrita. Tem como objetivo a economia de tempo, aumento da produtividade e a produção de textos revisados.",
-      },
-      {
         id: "assistente-pedagogico",
         name: "Organizador de Encontros Pedagógicos",
         desc: "Assistente criado para planejar, estruturar e otimizar encontros pedagógicos e formações docentes.",
@@ -28,6 +16,18 @@ export const AREAS: Area[] = [
         name: "Avaliador Pedagógico para Professores de Universidade",
         desc: "Esse assistente analisa planos produzidos por professores, revisando escrita, objetivos e coerência pedagógica.",
         func: "Ele sugere melhorias em atividades, materiais e linguagem, tornando o conteúdo mais dinâmico e alinhado à ementa. Atua diretamente em cada tópico do documento, otimizando o tempo de avaliação. Seu propósito é elevar a qualidade das disciplinas e fortalecer a experiência de ensino-aprendizagem.",
+      },
+      {
+        id: "assistente-educacao",
+        name: "Planejador de Aula e Treino de Educação Física",
+        desc: "Planeja aulas e treinos personalizados.",
+        func: "Criar planos de aula adaptados a diferentes anos letivos, além de atender alunos com necessidades especiais. Produzir ideias de atividades práticas e teóricas, além da formação de treinos e atividades. Elaborar textos explicativos, apresentações, mensagens e informativos para alunos e pais. Sugerir melhorias didáticas sempre com explicações simples e fundamentadas.",
+      },
+      {
+        id: "assistente-agronomia",
+        name: "Analista de Pesquisa Científica em Agronomia",
+        desc: "Ajuda estudantes a analisar e resumir artigos acadêmicos",
+        func: "O assistente deve resumir artigos, gerar tópicos, criar referências e citações ABNT, organizar estruturas de texto e sugerir ideias de escrita. Tem como objetivo a economia de tempo, aumento da produtividade e a produção de textos revisados.",
       },
     ],
   },
@@ -54,10 +54,10 @@ export const AREAS: Area[] = [
     title: "Jurídico",
     assistants: [
       {
-        id: "assistente-juridico",
-        name: "Assistente Jurídico para Atividades Profissionais e Acadêmicas ",
-        desc: "Produz resumos, análises e pesquisas jurídicas com precisão técnica.",
-        func: "Assistente criado para agilizar tarefas acadêmicas na área jurídica e otimizar a rotina de estudos e trabalho do profissional do Direito. O objetivo do assistente é auxiliar tarefas jurídicas, organizar estudos e otimizar o tempo, beneficiando o usuário e o escritório em que trabalha.",
+        id: "assistente-contratos",
+        name: "Analista de Contratos",
+        desc: "Assistente especializado em análise de contratos baseado na legislação brasileira.",
+        func: "Auxilia na revisão, interpretação e resumo de cláusulas contratuais. Identifica riscos jurídicos, financeiros e de conformidade, classificando-os por severidade. Sugere melhorias e ajustes com base em boas práticas do mercado. Atua como ferramenta de apoio, sem substituir a orientação jurídica profissional.",
       },
       {
         id: "assistente-processual",
@@ -66,16 +66,16 @@ export const AREAS: Area[] = [
         func: "Oferece análises objetivas, relatórios técnicos e resumos estruturados, auxiliando profissionais do Direito nas tomadas de decisão.",
       },
       {
+        id: "assistente-juridico",
+        name: "Assistente Jurídico para Atividades Profissionais e Acadêmicas ",
+        desc: "Produz resumos, análises e pesquisas jurídicas com precisão técnica.",
+        func: "Assistente criado para agilizar tarefas acadêmicas na área jurídica e otimizar a rotina de estudos e trabalho do profissional do Direito. O objetivo do assistente é auxiliar tarefas jurídicas, organizar estudos e otimizar o tempo, beneficiando o usuário e o escritório em que trabalha.",
+      },
+      {
         id: "assistente-produtorJuridico",
         name: "Produtor de Conteúdo Jurídico para Redes Sociais",
         desc: "Este assistente foi criado para apoiar advogados criminalistas na construção de uma presença digital sólida, estratégica e ética, com foco em gerar autoridade, empatia e credibilidade junto ao público.",
         func: "Ele atua como um planejador e redator especializado em conteúdo jurídico-criminal, adaptando linguagem técnica a formatos acessíveis e humanizados.",
-      },
-      {
-        id: "assistente-contratos",
-        name: "Analista de Contratos",
-        desc: "Assistente especializado em análise de contratos baseado na legislação brasileira.",
-        func: "Auxilia na revisão, interpretação e resumo de cláusulas contratuais. Identifica riscos jurídicos, financeiros e de conformidade, classificando-os por severidade. Sugere melhorias e ajustes com base em boas práticas do mercado. Atua como ferramenta de apoio, sem substituir a orientação jurídica profissional.",
       },
     ],
   },
