@@ -136,6 +136,13 @@ export const AREAS: Area[] = [
   {
     id: "rh",
     title: "RH",
-    assistants: [],
+    assistants: [
+      {
+        id: "assistente-recrutador",
+        name: "Recrutador de Pessoas",
+        desc: "Assistente criado para otimizar processos de recrutamento e seleção.",
+        func: "Esse assistente será responsável por receber e analisar currículos, identificar candidatos qualificados para a vaga, realizar a triagem inicial dos candidatos, fazer um relatório rankeando os mais qualificados de acordo com os critérios estabelecidos por você",
+      },
+    ],
   },
 ];
