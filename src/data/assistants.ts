@@ -104,6 +104,18 @@ export const AREAS: Area[] = [
     ],
   },
   {
+    id: "economia",
+    title: "Economia",
+    assistants: [
+      {
+        id: "assistente-planejamento",
+        name: "Consultor de Planejamento e Gestão de Agricultura Familiar",
+        desc: "Esse assistente desenvolve Plano de Gestão e Comercialização para comunidades rurais.",
+        func: "Tem como objetivo melhorar a gestão e a comercialização de produtos rurais, impulsionando a economia local. O assistente cria estratégias personalizadas, considerando recursos disponíveis, mercado e sustentabilidade.",
+      },
+    ],
+  },
+  {
     id: "tecnologia",
     title: "Tecnologia",
     assistants: [
