@@ -133,4 +133,9 @@ export const AREAS: Area[] = [
       },
     ],
   },
+  {
+    id: "rh",
+    title: "RH",
+    assistants: [],
+  },
 ];
