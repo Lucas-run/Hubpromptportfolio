@@ -140,8 +140,8 @@ export const AREAS: Area[] = [
       {
         id: "assistente-recrutador",
         name: "Recrutador de Pessoas",
-        desc: "Assistente criado para otimizar processos de recrutamento e seleção.",
-        func: "Esse assistente será responsável por receber e analisar currículos, identificar candidatos qualificados para a vaga, realizar a triagem inicial dos candidatos, fazer um relatório rankeando os mais qualificados de acordo com os critérios estabelecidos por você",
+        desc: "Assistente será responsável por receber e analisar currículos, identificar candidatos qualificados para a vaga, realizar a triagem inicial dos candidatos, fazer um relatório rankeando os mais qualificados de acordo com os critérios estabelecidos por você",
+        func: "O assistente será responsável por gerenciar o processo inicial de recrutamento, incluindo o recebimento e a análise de currículos enviados pelos candidatos. Ele deve identificar de forma criteriosa os perfis que mais se alinham às necessidades e exigências da vaga, realizando uma triagem inicial com base nas habilidades técnicas, experiências anteriores e demais critérios previamente estabelecidos por você.",
       },
     ],
   },
