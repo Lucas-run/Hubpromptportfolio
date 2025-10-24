@@ -48,11 +48,27 @@
   display: grid;
   gap: 12px;
 }
+/* Mantém o estilo atual do card selecionado */
 .selected {
-  margin-top: 14px;
-  padding: 12px;
-  border-radius: 8px;
   background: rgba(61, 60, 255, 0.05);
+  border-radius: 8px;
+  margin-top: 14px;
+
+  /* ↓↓↓ animação suave (aplicada sem mudar visual) ↓↓↓ */
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transform: translateY(-6px);
+  transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+  padding: 0 12px; /* padding inicial zerado para animação */
+}
+
+/* Quando estiver visível */
+.selectedShow {
+  max-height: 500px; /* suficiente para qualquer conteúdo */
+  opacity: 1;
+  transform: translateY(0);
+  padding: 12px; /* volta para o padding original */
 }
 
 .selectedTitle {

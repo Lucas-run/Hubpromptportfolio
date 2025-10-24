@@ -80,8 +80,8 @@ export const AREAS: Area[] = [
     ],
   },
   {
-    id: "Jornalismo",
-    title: "Jornalismo",
+    id: "marketing",
+    title: "Marketing",
     assistants: [
       {
         id: "assistente-midias",

@@ -4,11 +4,13 @@ import { AREAS } from "./data/assistants";
 import { Header } from "./components/header";
 import { AreaCard } from "./components/AreaCard";
 import { ModalImage } from "./components/ModalImage";
+import { useMediaQuery } from "./hooks/useMediaQuery";
 import styles from "./styles/App.module.css";
 
 import logoImage from "./assets/logo.jpeg";
 import empresaImage from "./assets/empresa.png";
-import professoraImage from "./assets/professora.png";
+import professoraDesktop from "./assets/professora-ws.png";
+import professoraMobile from "./assets/professora-mobile.png";
 
 type AppProps = {
   logoSrc?: string;
@@ -20,11 +22,17 @@ export default function App({
   brandTitle = "IA na Prática: do Zero ao seu Funcionário Digital",
 }: AppProps): JSX.Element {
   const [expandedArea, setExpandedArea] = useState<string | null>(null);
-  const [selectedAssistant, setSelectedAssistant] = useState<Assistant | null>(
-    null
-  );
 
-  // CONTROLA QUAL MODAL ESTÁ ABERTO
+  // Armazena qual assistente foi clicado e de qual área ele pertence
+  const [selectedAssistant, setSelectedAssistant] = useState<{
+    assistant: Assistant;
+    areaId: string;
+  } | null>(null);
+
+  // Detecta se a tela é desktop ou mobile (para imagem do modal)
+  const isDesktop = useMediaQuery("(min-width: 768px)");
+
+  // Controla qual modal especial está aberto
   const [activeModal, setActiveModal] = useState<
     "empresa" | "professora" | null
   >(null);
@@ -35,18 +43,26 @@ export default function App({
     setExpandedArea((prev) => (prev === id ? null : id));
   }
 
-  function handleAssistantClick(assistant: Assistant) {
-    setSelectedAssistant(assistant);
+  // Quando clica em um assistente, guarda a área a que ele pertence
+  function handleAssistantClick(assistant: Assistant, areaId: string) {
+    setSelectedAssistant((prev) => {
+      // Se for o mesmo assistente já selecionado → desmarca
+      if (
+        prev &&
+        prev.assistant.id === assistant.id &&
+        prev.areaId === areaId
+      ) {
+        return null;
+      }
+      // Se for outro assistente ou de outra área → seleciona
+      return { assistant, areaId };
+    });
+
+    // Copia o link para a área de transferência
     const link = `https://hub-prompt.example.com/assistant/${assistant.id}`;
-
-    // try copying to clipboard (graceful fallback)
     if (typeof navigator !== "undefined" && navigator.clipboard?.writeText) {
-      void navigator.clipboard.writeText(link).catch(() => {
-        // ignore clipboard errors in restricted environments
-      });
+      void navigator.clipboard.writeText(link).catch(() => {});
     }
-
-    // you can replace this with routing, modal open, etc.
   }
 
   return (
@@ -63,16 +79,39 @@ export default function App({
 
         <div className={styles.areas}>
           {areas.map((area) => (
-            <AreaCard
-              key={area.id}
-              area={area}
-              expanded={expandedArea === area.id}
-              onToggle={handleToggleArea}
-              onAssistantClick={handleAssistantClick}
-            />
+            <div key={area.id}>
+              <AreaCard
+                area={area}
+                expanded={expandedArea === area.id}
+                onToggle={handleToggleArea}
+                onAssistantClick={(assistant) =>
+                  handleAssistantClick(assistant, area.id)
+                }
+              />
+
+              {/* Exibe o assistente e suas funções logo abaixo da área correspondente */}
+              <aside
+                className={`${styles.selected} ${
+                  selectedAssistant && selectedAssistant.areaId === area.id
+                    ? styles.selectedShow
+                    : ""
+                }`}
+                role="status"
+              >
+                {selectedAssistant && selectedAssistant.areaId === area.id && (
+                  <>
+                    <div className={styles.selectedTitle}>
+                      {selectedAssistant.assistant.name}
+                    </div>
+                    <strong>Funções do assistente:</strong>
+                    <div>{selectedAssistant.assistant.func}</div>
+                  </>
+                )}
+              </aside>
+            </div>
           ))}
 
-          {/*CARDS ESPECIAIS */}
+          {/* Cards especiais (modal) */}
           <div
             className={styles.specialCard}
             onClick={() => setActiveModal("empresa")}
@@ -86,14 +125,6 @@ export default function App({
             Quem será sua professora
           </div>
         </div>
-
-        {selectedAssistant && (
-          <aside className={styles.selected} role="status">
-            <div className={styles.selectedTitle}>{selectedAssistant.name}</div>
-            <strong>Funções do assistente:</strong>
-            <div>{selectedAssistant.func}</div>
-          </aside>
-        )}
       </main>
 
       <footer className={styles.footer}>
@@ -102,7 +133,7 @@ export default function App({
         </small>
       </footer>
 
-      {/* EXIBIÇÃO DO MODAL DE ACORDO COM O CARD CLICADO */}
+      {/* Modais de imagem */}
       {activeModal === "empresa" && (
         <ModalImage
           src={empresaImage}
@@ -112,7 +143,7 @@ export default function App({
       )}
       {activeModal === "professora" && (
         <ModalImage
-          src={professoraImage}
+          src={isDesktop ? professoraDesktop : professoraMobile}
           alt="Quem será sua professora"
           onClose={() => setActiveModal(null)}
         />
