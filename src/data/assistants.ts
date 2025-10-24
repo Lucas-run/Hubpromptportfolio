@@ -140,8 +140,14 @@ export const AREAS: Area[] = [
       {
         id: "assistente-recrutador",
         name: "Recrutador de Pessoas",
-        desc: "Assistente será responsável por receber e analisar currículos, identificar candidatos qualificados para a vaga, realizar a triagem inicial dos candidatos, fazer um relatório rankeando os mais qualificados de acordo com os critérios estabelecidos por você",
-        func: "O assistente será responsável por gerenciar o processo inicial de recrutamento, incluindo o recebimento e a análise de currículos enviados pelos candidatos. Ele deve identificar de forma criteriosa os perfis que mais se alinham às necessidades e exigências da vaga, realizando uma triagem inicial com base nas habilidades técnicas, experiências anteriores e demais critérios previamente estabelecidos por você.",
+        desc: "Assistente virtual especializado em processos de recrutamento e seleção de candidatos.",
+        func: "O assistente será responsável por gerenciar o processo inicial de recrutamento. Ele deve identificar de forma criteriosa os perfis que mais se alinham às necessidades e exigências da vaga e ao perfil da empresa, A partir disto criar perguntas e dinâmicas de grupo específicas para avaliar os candidatos. Preparar fichas avaliativas para auxiliar a equipe de RH na tomada de decisão.",
+      },
+      {
+        id: "assistente-seletivos",
+        name: "Analista Inteligente para Processos Seletivos",
+        desc: "Assistente criado para auxiliar na organização e análise de processos seletivos de forma eficiente e estruturada.",
+        func: "Ele ajuda a gerenciar etapas do recrutamento, desde a triagem de currículos até a avaliação de candidatos, garantindo uma seleção justa e alinhada às necessidades da empresa.",
       },
     ],
   },
