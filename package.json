@@ -2,6 +2,7 @@
   "name": "hubpromptportfolio",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://www.hubpromptportfolio.site/",
   "type": "module",
   "scripts": {
     "dev": "vite",
