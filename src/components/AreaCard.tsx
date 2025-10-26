@@ -8,6 +8,7 @@ type AreaCardProps = {
   expanded: boolean;
   onToggle: (areaId: string) => void;
   onAssistantClick: (assistant: Assistant) => void;
+  selectedAssistant: { assistant: Assistant; areaId: string } | null;
 };
 
 export const AreaCard = ({
@@ -15,6 +16,7 @@ export const AreaCard = ({
   expanded,
   onToggle,
   onAssistantClick,
+  selectedAssistant,
 }: AreaCardProps) => {
   const id = useId();
 
@@ -39,6 +41,7 @@ export const AreaCard = ({
         <AssistantList
           assistants={area.assistants}
           onAssistantClick={onAssistantClick}
+          selectedAssistant={selectedAssistant}
         />
       </div>
     </section>

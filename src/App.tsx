@@ -87,9 +87,10 @@ export default function App({
                 onAssistantClick={(assistant) =>
                   handleAssistantClick(assistant, area.id)
                 }
+                selectedAssistant={selectedAssistant}
               />
 
-              {/* Exibe o assistente e suas funções logo abaixo da área correspondente */}
+              {/* Exibe o assistente e suas funções logo abaixo da área correspondente
               <aside
                 className={`${styles.selected} ${
                   selectedAssistant && selectedAssistant.areaId === area.id
@@ -107,7 +108,7 @@ export default function App({
                     <div>{selectedAssistant.assistant.func}</div>
                   </>
                 )}
-              </aside>
+              </aside> */}
             </div>
           ))}
 
