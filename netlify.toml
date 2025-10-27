@@ -1,0 +1,6 @@
+# netlify.toml
+[[redirects]]
+  from = "/*"
+  to = "http://www.hubpromptportfolio.site/:splat"
+  status = 301
+  force = true # Garante que a regra tem prioridade sobre arquivos existentes
